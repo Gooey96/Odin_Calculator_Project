@@ -23,3 +23,18 @@ function divide(a, b) {
   console.log(a / b);
 };
 
+function operate(a, operation, b) {
+  switch(operation) {
+    case '+':
+      add(a, b);
+      break;
+    case '-':
+      subtract(a, b);
+      break;
+    case '*':
+      multiply(a, b);
+      break;
+    case '/':
+      divide(a, b);
+  }
+}
