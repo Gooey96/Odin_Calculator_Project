@@ -1,6 +1,6 @@
 let firstNumbers = 0;
 let secondNumbers = 0;
-let operator = {
+const operator = {
   add: '+',
   subtract: '-',
   multiply: '*',
