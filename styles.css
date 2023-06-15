@@ -5,3 +5,14 @@
   padding: 0;
   margin: 0;
 }
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  border: 1px solid black; /* for debugging */
+}
