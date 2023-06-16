@@ -34,7 +34,7 @@ body {
 .second_display {
   text-align: right;
   margin-bottom: 15px;
-  border: 1px solid black;
+  border: 1px solid black; /* For debugging */
 }
 
 .first_display {
