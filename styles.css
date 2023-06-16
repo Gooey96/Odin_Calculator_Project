@@ -27,4 +27,20 @@ body {
   height: 120px;
   width: 356px;
   border-radius: 5px;
+  padding: 19px;
+}
+
+.first_display,
+.second_display {
+  text-align: right;
+  margin-bottom: 15px;
+  border: 1px solid black;
+}
+
+.first_display {
+  font-size: 18px;
+}
+
+.second_display {
+  font-size: 34px;
 }
