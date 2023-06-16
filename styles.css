@@ -44,3 +44,8 @@ body {
 .second_display {
   font-size: 34px;
 }
+
+.btn_container {
+  border: 2px solid black; /* For debugging */
+  margin-top: 18px;
+}
