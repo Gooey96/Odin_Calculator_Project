@@ -49,3 +49,10 @@ body {
   border: 2px solid black; /* For debugging */
   margin-top: 18px;
 }
+
+.first_groupBtn {
+  border: 1px solid black; /* For debugging */
+  display: flex;
+  justify-content: space-evenly;
+  height: 56px;
+}
