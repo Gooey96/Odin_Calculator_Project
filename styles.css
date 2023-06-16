@@ -6,6 +6,10 @@
   margin: 0;
 }
 
+button {
+  cursor: pointer;
+}
+
 body {
   display: flex;
   flex-direction: column;
