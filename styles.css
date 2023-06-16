@@ -67,3 +67,10 @@ body {
   border: 2px solid black;
   border-radius: 5px;
 }
+
+.second_groupBtn {
+  border: 2px solid black; /* For debugging */
+  margin-top: 10px;
+  display: flex;
+  flex-flow: row wrap;
+}
