@@ -9,6 +9,7 @@
 button {
   cursor: pointer;
   box-shadow: 2px 3px;
+  outline: none;
 }
 
 body {
