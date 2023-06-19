@@ -13,6 +13,7 @@
   --secondary-button: #055240;
   --accent: #f3c839;
   --secondary-background: #FFFAFA;
+  --third-button: #d43ef9;
 }
 
 button {
@@ -46,7 +47,7 @@ body {
   margin-top: 20px;
   border-radius: 15px;
   padding: 23px;
-  box-shadow: 0px 4px; /* Modify this later */
+  box-shadow: 3px 4px; /* Modify this later */
   background-color: var(--accent); /* Probably gonna change */
 }
 
@@ -91,6 +92,7 @@ body {
   border: 2px solid black;
   border-radius: 5px;
   font-weight: bolder;
+  background-color: var(--third-button);
 }
 
 .second_groupBtn {
@@ -108,6 +110,11 @@ body {
   border: 2px solid black;
   border-radius: 5px;
   font-weight: bolder;
+  background-color: aquamarine;
+}
+
+.operator {
+  background-color: var(--primary-button);
 }
 
 .footer {
