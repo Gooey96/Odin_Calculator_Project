@@ -42,6 +42,15 @@ function operate(a, operation, b) {
 const secondDisplay = document.querySelector('.second_display');
 const numberButtons = document.querySelectorAll('.numbers');
 
-numberButtons.forEach(addEventListener('click', function(e) {
-
-}));
+numberButtons.forEach((button) => {
+  button.addEventListener('click', function(e) {
+    firstNumbers += e.target.textContent;
+    if(secondDisplay.textContent === '0') {
+      secondDisplay.textContent = firstNumbers;
+    }
+    else if(secondDisplay !== '0') {
+      secondDisplay.textContent += e.target.textContent;
+    }
+    console.log(firstNumbers);
+  });
+});
