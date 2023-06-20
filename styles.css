@@ -23,7 +23,7 @@ button {
 }
 
 button:hover {
-  background-color: var(--secondary-background); /* This color is just an example */
+  background-color: var(--secondary-background);
 }
 
 button:active {
@@ -37,7 +37,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: var(--background); /* Probably gonna change */
+  background-color: var(--background);
 }
 
 .container {
@@ -47,8 +47,8 @@ body {
   margin-top: 20px;
   border-radius: 15px;
   padding: 23px;
-  box-shadow: 3px 4px; /* Modify this later */
-  background-color: var(--accent); /* Probably gonna change */
+  box-shadow: 3px 4px;
+  background-color: var(--accent);
 }
 
 .display_container {
