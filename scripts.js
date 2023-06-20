@@ -38,3 +38,10 @@ function operate(a, operation, b) {
       divide(a, b);
   }
 }
+
+const secondDisplay = document.querySelector('.second_display');
+const numberButtons = document.querySelectorAll('.numbers');
+
+numberButtons.forEach(addEventListener('click', function(e) {
+
+}));
