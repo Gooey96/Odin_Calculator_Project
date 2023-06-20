@@ -94,11 +94,11 @@ body {
   font-weight: bolder;
 }
 
-.clear_btn {
+.clear_btn:hover {
   background-color: #faa;
 }
 
-.delete_btn {
+.delete_btn:hover {
   background-color: #aaf;
 }
 
