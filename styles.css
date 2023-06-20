@@ -92,7 +92,14 @@ body {
   border: 2px solid black;
   border-radius: 5px;
   font-weight: bolder;
-  background-color: var(--third-button);
+}
+
+.clear_btn {
+  background-color: #faa;
+}
+
+.delete_btn {
+  background-color: #aaf;
 }
 
 .second_groupBtn {
