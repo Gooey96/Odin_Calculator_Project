@@ -1,5 +1,5 @@
-let firstNumbers = 0;
-let secondNumbers = 0;
+let firstNumbers = '';
+let secondNumbers = '';
 const operator = {
   add: '+',
   subtract: '-',
