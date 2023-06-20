@@ -94,6 +94,14 @@ body {
   font-weight: bolder;
 }
 
+.clear_btn {
+  background-color: #E3242b;
+}
+
+.delete_btn {
+  background-color: #1338BE;
+}
+
 .clear_btn:hover {
   background-color: #faa;
 }
