@@ -120,4 +120,5 @@ body {
 .footer {
   margin-top: 50px;
   font-size: 26px;
+  color: var(--text);
 }
