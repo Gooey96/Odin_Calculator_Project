@@ -23,7 +23,7 @@ button {
 }
 
 button:hover {
-  background-color: aquamarine; /* This color is just an example */
+  background-color: var(--secondary-background); /* This color is just an example */
 }
 
 button:active {
