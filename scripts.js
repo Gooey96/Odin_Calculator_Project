@@ -41,7 +41,7 @@ function operate(a, operation, b) {
 
 const secondDisplay = document.querySelector('.second_display');
 const numberButtons = document.querySelectorAll('.numbers');
-const operatorButtons = document.querySelectorAll('.operator')
+const operatorButtons = document.querySelectorAll('.operator');
 
 numberButtons.forEach((button) => {
   button.addEventListener('click', function(e) {
