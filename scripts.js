@@ -45,12 +45,13 @@ const operatorButtons = document.querySelectorAll('.operator')
 
 numberButtons.forEach((button) => {
   button.addEventListener('click', function(e) {
-    firstNumbers += e.target.textContent;
     if(secondDisplay.textContent === '0') {
-      secondDisplay.textContent = firstNumbers;
+      secondDisplay.textContent = e.target.textContent;
+      firstNumbers = e.target.textContent;
     }
-    else if(secondDisplay !== '0') {
+    else if(secondDisplay.textContent !== '0') {
       secondDisplay.textContent += e.target.textContent;
+      firstNumbers += e.target.textContent;
     }
     console.log(firstNumbers);
   });
