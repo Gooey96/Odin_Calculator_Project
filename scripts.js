@@ -39,6 +39,7 @@ function operate(a, operation, b) {
   }
 }
 
+const firstDisplay = document.querySelector('.first_display');
 const secondDisplay = document.querySelector('.second_display');
 const numberButtons = document.querySelectorAll('.numbers');
 const operatorButtons = document.querySelectorAll('.operator');
