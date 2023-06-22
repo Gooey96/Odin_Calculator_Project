@@ -65,7 +65,7 @@ operatorButtons.forEach((button) => { // Work in Progress :)
     else if(secondDisplay.textContent === '0' && firstDisplay.textContent === '') {
       firstDisplay.textContent = secondDisplay.textContent + ` ${e.target.textContent}`;
       secondDisplay.textContent = '0';
-      operator = e.target.textContent;
+      operator = e.target.textContent;   // It is still not finished yet :)
     }
     else if(secondDisplay.textContent !== '0' && firstDisplay.textContent !== '0') {
       let firstOperand = Number(firstNumbers);
