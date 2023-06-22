@@ -25,9 +25,9 @@ function operate(a, operation, b) {
       results = add(a, b);
       break;
     case '-':
-      results = subtract(a, b);
-      break;
-    case 'x':
+      results = subtract(a, b);        // This function probably need to refractor
+      break;                           // Maybe not 
+    case 'x':                          // Time will tell
       results = multiply(a, b);
       break;
     case '/':
@@ -55,12 +55,18 @@ numberButtons.forEach((button) => {
   });
 });
 
+  // There something wrong with this codes / function that
+  // the number doesn't operate correctly
+  // and sometimes give a wrong output number
+  // maybe have something to do with the operate function 
+  // maybe not I don't know yet 
+  // long sigh 
 operatorButtons.forEach((button) => { // Work in Progress :)
   button.addEventListener('click', function(e) {
     if(secondDisplay.textContent !== '0' && firstDisplay.textContent === '') {
       firstDisplay.textContent = secondDisplay.textContent + ` ${e.target.textContent}`;
       secondDisplay.textContent = '0';
-      operator = e.target.textContent;
+      operator = e.target.textContent;  
     }
     else if(secondDisplay.textContent === '0' && firstDisplay.textContent === '') {
       firstDisplay.textContent = secondDisplay.textContent + ` ${e.target.textContent}`;
