@@ -27,7 +27,7 @@ function operate(a, operation, b) {
     case '-':
       results = subtract(a, b);
       break;
-    case '*':
+    case 'x':
       results = multiply(a, b);
       break;
     case '/':
@@ -71,12 +71,13 @@ operatorButtons.forEach((button) => { // Work in Progress :)
       let firstOperand = Number(firstNumbers);
       let secondOperand = Number(secondNumbers = secondDisplay.textContent);
       let results = operate(firstOperand, operator, secondOperand);
-
-      secondDisplay.textContent = `${results}`;
+      firstDisplay.textContent = `${results + ' ' + e.target.textContent}`;
+      firstNumbers = results;
+      secondDisplay.textContent = '0';   // It finally works blyattttttttt
       console.log(results);
     }
-    console.log('This is when you press the operator button',firstNumbers);
-    console.log('This is the secondNumber values', secondNumbers);
-    console.log('This is the operator symbol is', operator)
+    console.log('This is the firstNumber values',firstNumbers);
+    console.log('This is the secondNumber values, it will empty when you press the operator buttons for the first time', secondNumbers);
+    console.log('This is the operator symbol', operator)
   })
 })
