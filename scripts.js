@@ -1,11 +1,6 @@
 let firstNumbers = '';
 let secondNumbers = '';
-const operator = {
-  add: '+',
-  subtract: '-',
-  multiply: '*',
-  divide: '/',
-};
+let operator = '';
 
 function add(a, b) {
   console.log(a + b);
