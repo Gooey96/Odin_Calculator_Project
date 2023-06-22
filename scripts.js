@@ -64,8 +64,14 @@ operatorButtons.forEach((button) => { // Work in Progress :)
       secondDisplay.textContent = '0';
     }
     else if(secondDisplay.textContent !== '0' && firstDisplay.textContent !== '0') {
-      
+      let firstOperand = Number(firstNumbers);
+      let secondOperand = Number(secondNumbers = secondDisplay.textContent);
+      let operand = (operator = e.target.textContent);
+      let results = operate(firstOperand, operand, secondOperand);
+
+      secondDisplay.textContent = results;
     }
     console.log('This is when you press the operator button',firstNumbers);
+    console.log('This is the secondNumber values', secondNumbers);
   })
 })
