@@ -64,7 +64,7 @@ operatorButtons.forEach((button) => { // Work in Progress :)
       secondDisplay.textContent = '0';
     }
     else if(secondDisplay.textContent !== '0' && firstDisplay.textContent !== '0') {
-      // Not finished yet :(
+      
     }
     console.log('This is when you press the operator button',firstNumbers);
   })
