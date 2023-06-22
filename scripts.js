@@ -62,11 +62,11 @@ operatorButtons.forEach((button) => { // Work in Progress :)
   button.addEventListener('click', function(e) {
     //firstDisplay.textContent = secondDisplay.textContent; // It works :)
     if(secondDisplay.textContent !== '0') { // It works :)
-      firstDisplay.textContent = secondDisplay.textContent;
+      firstDisplay.textContent = secondDisplay.textContent + ` ${e.target.textContent}`;
       secondDisplay.textContent = '0';
     }
     else if(secondDisplay.textContent === '0') { // It works :)
-      firstDisplay.textContent = secondDisplay.textContent;
+      firstDisplay.textContent = secondDisplay.textContent + ` ${e.target.textContent}`;
       secondDisplay.textContent = '0';
     }
     console.log('This is when you press the operator button',firstNumbers);
