@@ -19,19 +19,21 @@ function divide(a, b) {
 };
 
 function operate(a, operation, b) {
+  let results = '';
   switch(operation) {
     case '+':
-      add(a, b);
+      results = add(a, b);
       break;
     case '-':
-      subtract(a, b);
+      results = subtract(a, b);
       break;
     case '*':
-      multiply(a, b);
+      results = multiply(a, b);
       break;
     case '/':
-      divide(a, b);
+      results = divide(a, b);
   }
+  return results;
 }
 
 const firstDisplay = document.querySelector('.first_display');
@@ -58,20 +60,23 @@ operatorButtons.forEach((button) => { // Work in Progress :)
     if(secondDisplay.textContent !== '0' && firstDisplay.textContent === '') {
       firstDisplay.textContent = secondDisplay.textContent + ` ${e.target.textContent}`;
       secondDisplay.textContent = '0';
+      operator = e.target.textContent;
     }
     else if(secondDisplay.textContent === '0' && firstDisplay.textContent === '') {
       firstDisplay.textContent = secondDisplay.textContent + ` ${e.target.textContent}`;
       secondDisplay.textContent = '0';
+      operator = e.target.textContent;
     }
     else if(secondDisplay.textContent !== '0' && firstDisplay.textContent !== '0') {
       let firstOperand = Number(firstNumbers);
       let secondOperand = Number(secondNumbers = secondDisplay.textContent);
-      let operand = (operator = e.target.textContent);
-      let results = operate(firstOperand, operand, secondOperand);
+      let results = operate(firstOperand, operator, secondOperand);
 
-      secondDisplay.textContent = results;
+      secondDisplay.textContent = `${results}`;
+      console.log(results);
     }
     console.log('This is when you press the operator button',firstNumbers);
     console.log('This is the secondNumber values', secondNumbers);
+    console.log('This is the operator symbol is', operator)
   })
 })
