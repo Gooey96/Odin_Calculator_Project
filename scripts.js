@@ -42,58 +42,7 @@ const numberButtons = document.querySelectorAll('.numbers');
 const operatorButtons = document.querySelectorAll('.operator');
 
 numberButtons.forEach((button) => {
-  button.addEventListener('click', function(e) {
-    if(secondDisplay.textContent === '0') {
-      secondDisplay.textContent = e.target.textContent;
-      //firstNumbers = e.target.textContent;
-    }
-    else if(secondDisplay.textContent !== '0') {
-      secondDisplay.textContent += e.target.textContent;
-      //firstNumbers += e.target.textContent;
-    }
-    //console.log(firstNumbers);
-  });
+  button.addEventListener('click', function(e) {});
 });
 
-  // There something wrong with this codes / function that
-  // the number doesn't operate correctly
-  // and sometimes give a wrong output number
-  // maybe have something to do with the operate function 
-  // maybe not I don't know yet 
-  // long sigh 
-operatorButtons.forEach((button) => { // Work in Progress :)
-  button.addEventListener('click', function(e) {
-    let results = '0';
-
-    if(secondDisplay.textContent !== '0' && firstDisplay.textContent === `${results} ${operator}`) {
-      operator = e.target.textContent;
-      //firstNumbers = Number(results);
-      secondNumbers = Number(secondDisplay.textContent);
-      results = operate(firstNumbers, operator, secondNumbers);
-      firstDisplay.textContent = `${results} ${e.target.textContent}`;
-    }
-    else if(firstDisplay.textContent !== '' && secondDisplay.textContent !== '0') {
-      secondNumbers = Number(secondDisplay.textContent);
-      //operator = e.target.textContent
-      results = operate(firstNumbers, operator, secondNumbers);
-      firstDisplay.textContent = `${results} ${e.target.textContent}`;
-      secondDisplay.textContent = '0';     // Still Not Finished yet:(
-      firstNumbers = results;
-    }
-    else if(secondDisplay.textContent !== '0' && firstDisplay.textContent === '') {
-      firstNumbers = Number(secondDisplay.textContent);
-      operator = e.target.textContent;
-      firstDisplay.textContent = `${secondDisplay.textContent} ${e.target.textContent}`
-      secondDisplay.textContent = '0'
-    }
-    else {
-      console.log('error');
-    }
-
-    console.log(typeof(firstNumbers));
-    console.log('This is the firstNumber values',firstNumbers);
-    console.log('This is the secondNumber values, it will empty when you press the operator buttons for the first time', secondNumbers);
-    console.log('This is the operator symbol', operator)
-    console.log(results);
-  })
-})
+operatorButtons.forEach((button) => {})
