@@ -46,9 +46,11 @@ numberButtons.forEach((button) => {
     if(firstDisplay.textContent !== '') {
       if(e.target.textContent === '0') {
         secondNumbers = e.target.textContent;
+        secondDisplay.textContent = e.target.textContent;
       }
       else {
         secondNumbers += e.target.textContent;
+        secondDisplay.textContent += e.target.textContent;
       }
     }
     else if(secondDisplay.textContent === '0') {
@@ -64,4 +66,8 @@ numberButtons.forEach((button) => {
   });
 });
 
-operatorButtons.forEach((button) => {})
+operatorButtons.forEach((button) => {
+  button.addEventListener('click', function(e) {
+    operator = e.target.textContent;
+  })
+})
