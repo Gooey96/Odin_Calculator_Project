@@ -69,5 +69,9 @@ numberButtons.forEach((button) => {
 operatorButtons.forEach((button) => {
   button.addEventListener('click', function(e) {
     operator = e.target.textContent;
+    let results = '';
+    if(secondDisplay.textContent !== '0') {
+      
+    }
   })
 })
