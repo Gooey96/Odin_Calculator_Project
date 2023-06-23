@@ -43,23 +43,23 @@ const operatorButtons = document.querySelectorAll('.operator');
 
 numberButtons.forEach((button) => {
   button.addEventListener('click', function(e) {
-    if(firstDisplay.textContent !== '') {
+    if(secondDisplay.textContent !== '') {
       if(e.target.textContent === '0') {
         secondNumbers = e.target.textContent;
-        secondDisplay.textContent = e.target.textContent;
+        firstDisplay.textContent = e.target.textContent;
       }
       else {
         secondNumbers += e.target.textContent;
-        secondDisplay.textContent += e.target.textContent;
+        firstDisplay.textContent += e.target.textContent;
       }
     }
-    else if(secondDisplay.textContent === '0') {
+    else if(firstDisplay.textContent === '0') {
       firstNumbers = e.target.textContent;
-      secondDisplay.textContent = e.target.textContent;
+      firstDisplay.textContent = e.target.textContent;
     }
-    else if(secondDisplay.textContent !== '0') {
+    else if(firstDisplay.textContent !== '0') {
       firstNumbers += e.target.textContent;
-      secondDisplay.textContent += e.target.textContent;
+      firstDisplay.textContent += e.target.textContent;
     }
     console.log('This is first',firstNumbers);
     console.log('This is second',secondNumbers);
