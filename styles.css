@@ -63,15 +63,15 @@ body {
 .first_display,
 .second_display {
   text-align: right;
-  margin-top: -7px;
+  margin-top: -9px;
 }
 
 .first_display {
-  font-size: 30px;
+  font-size: 35px;
 }
 
 .second_display {
-  font-size: 40px;
+  font-size: 45px;
 }
 
 .btn_container {
