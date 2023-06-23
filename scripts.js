@@ -77,7 +77,7 @@ operatorButtons.forEach((button) => { // Work in Progress :)
       //operator = e.target.textContent
       results = operate(firstNumbers, operator, secondNumbers);
       firstDisplay.textContent = `${results} ${e.target.textContent}`;
-      secondDisplay.textContent = '0';
+      secondDisplay.textContent = '0';     // Still Not Finished yet:(
       firstNumbers = results;
     }
     else if(secondDisplay.textContent !== '0' && firstDisplay.textContent === '') {
