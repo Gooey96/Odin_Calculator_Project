@@ -45,13 +45,13 @@ numberButtons.forEach((button) => {
   button.addEventListener('click', function(e) {
     if(secondDisplay.textContent === '0') {
       secondDisplay.textContent = e.target.textContent;
-      firstNumbers = e.target.textContent;
+      //firstNumbers = e.target.textContent;
     }
     else if(secondDisplay.textContent !== '0') {
       secondDisplay.textContent += e.target.textContent;
-      firstNumbers += e.target.textContent;
+      //firstNumbers += e.target.textContent;
     }
-    console.log(firstNumbers);
+    //console.log(firstNumbers);
   });
 });
 
@@ -63,25 +63,25 @@ numberButtons.forEach((button) => {
   // long sigh 
 operatorButtons.forEach((button) => { // Work in Progress :)
   button.addEventListener('click', function(e) {
-    if(secondDisplay.textContent !== '0' && firstDisplay.textContent === '') {
-      firstDisplay.textContent = secondDisplay.textContent + ` ${e.target.textContent}`;
-      secondDisplay.textContent = '0';
-      operator = e.target.textContent;  
+
+    operator = e.target.textContent;
+
+    if(firstDisplay !== '0' && secondDisplay !== '0') {
+      operate();
     }
-    else if(secondDisplay.textContent === '0' && firstDisplay.textContent === '') {
-      firstDisplay.textContent = secondDisplay.textContent + ` ${e.target.textContent}`;
-      secondDisplay.textContent = '0';
-      operator = e.target.textContent;   // It is still not finished yet :)
+    else if(firstDisplay.textContent !== '') {
+      secondNumbers = Number(secondDisplay.textContent);
     }
-    else if(secondDisplay.textContent !== '0' && firstDisplay.textContent !== '0') {
-      let firstOperand = Number(firstNumbers);
-      let secondOperand = Number(secondNumbers = secondDisplay.textContent);
-      let results = operate(firstOperand, operator, secondOperand);
-      firstDisplay.textContent = `${results + ' ' + e.target.textContent}`;
-      firstNumbers = results;
-      secondDisplay.textContent = '0';   // It finally works blyattttttttt
-      console.log(results);
+    else if(secondDisplay.textContent !== '0') {
+      firstNumbers = Number(secondDisplay.textContent);
+      firstDisplay.textContent = `${secondDisplay.textContent} ${e.target.textContent}`
+      secondDisplay.textContent = '0'
     }
+    else {
+      console.log('error');
+    }
+
+    console.log(typeof(firstNumbers));
     console.log('This is the firstNumber values',firstNumbers);
     console.log('This is the secondNumber values, it will empty when you press the operator buttons for the first time', secondNumbers);
     console.log('This is the operator symbol', operator)
