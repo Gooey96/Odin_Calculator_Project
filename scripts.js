@@ -63,17 +63,26 @@ numberButtons.forEach((button) => {
   // long sigh 
 operatorButtons.forEach((button) => { // Work in Progress :)
   button.addEventListener('click', function(e) {
+    let results = '0';
 
-    operator = e.target.textContent;
-
-    if(firstDisplay !== '0' && secondDisplay !== '0') {
-      operate();
-    }
-    else if(firstDisplay.textContent !== '') {
+    if(secondDisplay.textContent !== '0' && firstDisplay.textContent === `${results} ${operator}`) {
+      operator = e.target.textContent;
+      //firstNumbers = Number(results);
       secondNumbers = Number(secondDisplay.textContent);
+      results = operate(firstNumbers, operator, secondNumbers);
+      firstDisplay.textContent = `${results} ${e.target.textContent}`;
     }
-    else if(secondDisplay.textContent !== '0') {
+    else if(firstDisplay.textContent !== '' && secondDisplay.textContent !== '0') {
+      secondNumbers = Number(secondDisplay.textContent);
+      //operator = e.target.textContent
+      results = operate(firstNumbers, operator, secondNumbers);
+      firstDisplay.textContent = `${results} ${e.target.textContent}`;
+      secondDisplay.textContent = '0';
+      firstNumbers = results;
+    }
+    else if(secondDisplay.textContent !== '0' && firstDisplay.textContent === '') {
       firstNumbers = Number(secondDisplay.textContent);
+      operator = e.target.textContent;
       firstDisplay.textContent = `${secondDisplay.textContent} ${e.target.textContent}`
       secondDisplay.textContent = '0'
     }
@@ -85,5 +94,6 @@ operatorButtons.forEach((button) => { // Work in Progress :)
     console.log('This is the firstNumber values',firstNumbers);
     console.log('This is the secondNumber values, it will empty when you press the operator buttons for the first time', secondNumbers);
     console.log('This is the operator symbol', operator)
+    console.log(results);
   })
 })
