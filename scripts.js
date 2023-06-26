@@ -52,26 +52,36 @@ function containEqual(eql) {
 
 numberButtons.forEach((button) => {    
   button.addEventListener('click', function(e) {
-    if(containOperator(firstDisplay.textContent)) {
-      if(secondNumbers === ('' || '0')) {
+    if(containOperator(firstDisplay.textContent) && !containEqual(firstDisplay.textContent)) {
+      if(secondNumbers === '') {
+        secondNumbers = '';           // Still work in progress
         secondNumbers = e.target.textContent;
         firstDisplay.textContent = `${firstNumbers} ${operator} ${secondNumbers}`;
+        console.log('New variable for the second number:',secondNumbers);
       }
-      else {
+      else if(secondNumbers === ('' || '0')) {
+        secondNumbers = e.target.textContent;
+        firstDisplay.textContent = `${firstNumbers} ${operator} ${secondNumbers}`;
+        console.log('This is second',secondNumbers);
+      }
+      else if(secondNumbers !== ('' || '0')){
         secondNumbers += e.target.textContent;
         firstDisplay.textContent = `${firstNumbers} ${operator} ${secondNumbers}`;
-      }
+        console.log('This is second',secondNumbers);
+      } 
     }
-    else if(firstDisplay.textContent === '0') {
+    else if(containEqual(firstDisplay.textContent) || firstDisplay.textContent === '0') {
       firstNumbers = e.target.textContent;
       firstDisplay.textContent = e.target.textContent;
+      console.log('This is first',firstNumbers);
     }
     else if(firstDisplay.textContent !== '0') {
       firstNumbers += e.target.textContent;
       firstDisplay.textContent += e.target.textContent;
+      console.log('This is first',firstNumbers);
     }
-    console.log('This is first',firstNumbers);
-    console.log('This is second',secondNumbers);
+    //console.log('This is first',firstNumbers);
+    //console.log('This is second',secondNumbers);
   });
 });
 
