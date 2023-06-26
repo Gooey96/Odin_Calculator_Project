@@ -71,7 +71,7 @@ operatorButtons.forEach((button) => {
     operator = e.target.textContent;
     let results = '';
     if(firstDisplay.textContent === firstNumbers) {
-      
+      firstDisplay.textContent = `${firstNumbers} ${operator}`
     }
   })
 })
