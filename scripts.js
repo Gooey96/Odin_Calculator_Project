@@ -86,7 +86,7 @@ operatorButtons.forEach((button) => {
   })
 });
 
-equalButton.addEventListener('click', function(e) { // Not finished yet
+equalButton.addEventListener('click', function(e) { // Not finish yet
   if(containOperator(firstDisplay.textContent) && secondNumbers) {
     let first = +firstNumbers;
     let second = +secondNumbers;
@@ -97,6 +97,6 @@ equalButton.addEventListener('click', function(e) { // Not finished yet
     console.log(typeof(second));
   }
   else if(firstDisplay.textContent === firstNumbers) {
-    secondDisplay.textContent = `${firstNumbers}`;
+    secondDisplay.textContent = `${firstNumbers}`;  // This is also not finish yet
   }
 });
