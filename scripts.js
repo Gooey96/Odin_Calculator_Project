@@ -77,7 +77,10 @@ operatorButtons.forEach((button) => {
       operator = e.target.textContent;
       firstDisplay.textContent = `${firstNumbers} ${operator}`;
       console.log("It's Works");
+      console.log("This the operator:",operator)
     }
+    else if(containOperator(firstDisplay.textContent)) {
     
+    }
   })
 })
