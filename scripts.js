@@ -70,7 +70,7 @@ operatorButtons.forEach((button) => {
   button.addEventListener('click', function(e) {
     operator = e.target.textContent;
     let results = '';
-    if(secondDisplay.textContent !== '0') {
+    if(firstDisplay.textContent === firstNumbers) {
       
     }
   })
