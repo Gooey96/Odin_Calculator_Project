@@ -46,10 +46,10 @@ function containOperator(opr) {
   return /\D/.test(opr)
 };
 
-numberButtons.forEach((button) => {    // This function is finally finished wohooo!!!
+numberButtons.forEach((button) => {    
   button.addEventListener('click', function(e) {
     if(containOperator(firstDisplay.textContent)) {
-      if(e.target.textContent === '0') {
+      if(secondNumbers === ('' || '0')) {
         secondNumbers = e.target.textContent;
         firstDisplay.textContent = `${firstNumbers} ${operator} ${secondNumbers}`;
       }
@@ -86,3 +86,14 @@ operatorButtons.forEach((button) => {
   })
 });
 
+equalButton.addEventListener('click', function(e) { // Not finished yet
+  if(containOperator(firstDisplay.textContent)) {
+    let first = +firstNumbers;
+    let second = +secondNumbers;
+    let results = operate(first, operator, second);
+    firstDisplay.textContent = `${firstNumbers} ${operator} ${secondNumbers} ${'='}`
+    secondDisplay.textContent = results;
+    console.log(typeof(first));
+    console.log(typeof(second));
+  }
+});
