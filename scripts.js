@@ -51,7 +51,7 @@ function containEqual(eql) {
   return /=/.test(eql);
 };
 
-numberButtons.forEach((button) => {    
+numberButtons.forEach((button) => {    // Probably ok i don't know
   button.addEventListener('click', function(e) {
     if(containOperator(firstDisplay.textContent) && !containEqual(firstDisplay.textContent)) {
        if(secondNumbers === ('' || '0')) {
