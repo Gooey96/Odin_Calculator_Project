@@ -40,6 +40,7 @@ const firstDisplay = document.querySelector('.first_display');
 const secondDisplay = document.querySelector('.second_display');
 const numberButtons = document.querySelectorAll('.numbers');
 const operatorButtons = document.querySelectorAll('.operator');
+const equalButton = document.querySelector('.equal');
 
 function containOperator(opr) {
   return /\D/.test(opr)
@@ -84,3 +85,4 @@ operatorButtons.forEach((button) => {
     }
   })
 });
+
