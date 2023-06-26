@@ -45,7 +45,7 @@ function containOperator(opr) {
   return /\D/.test(opr)
 }
 
-numberButtons.forEach((button) => {
+numberButtons.forEach((button) => {    // This function is finally finished wohooo!!!
   button.addEventListener('click', function(e) {
     if(containOperator(firstDisplay.textContent)) {
       if(e.target.textContent === '0') {
