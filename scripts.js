@@ -34,7 +34,7 @@ function operate(a, operation, b) {
       results = divide(a, b);
   }
   return results;
-}
+};
 
 const firstDisplay = document.querySelector('.first_display');
 const secondDisplay = document.querySelector('.second_display');
@@ -43,7 +43,7 @@ const operatorButtons = document.querySelectorAll('.operator');
 
 function containOperator(opr) {
   return /\D/.test(opr)
-}
+};
 
 numberButtons.forEach((button) => {    // This function is finally finished wohooo!!!
   button.addEventListener('click', function(e) {
@@ -83,4 +83,4 @@ operatorButtons.forEach((button) => {
     
     }
   })
-})
+});
