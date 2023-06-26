@@ -78,5 +78,9 @@ operatorButtons.forEach((button) => {
       firstDisplay.textContent = `${firstNumbers} ${operator}`;
       console.log("It's Works");
     }
+    else if(firstDisplay.textContent === '0') {
+      firstDisplay.textContent = `${firstNumbers} ${e.target.textContent}`
+      console.log("It's does not equal to the first number");
+    }
   })
 })
