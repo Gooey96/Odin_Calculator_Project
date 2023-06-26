@@ -53,35 +53,29 @@ function containEqual(eql) {
 numberButtons.forEach((button) => {    
   button.addEventListener('click', function(e) {
     if(containOperator(firstDisplay.textContent) && !containEqual(firstDisplay.textContent)) {
-      if(secondNumbers === '') {
-        secondNumbers = '';           // Still work in progress
-        secondNumbers = e.target.textContent;
-        firstDisplay.textContent = `${firstNumbers} ${operator} ${secondNumbers}`;
-        console.log('New variable for the second number:',secondNumbers);
-      }
-      else if(secondNumbers === ('' || '0')) {
+       if(secondNumbers === ('' || '0')) {
         secondNumbers = e.target.textContent;
         firstDisplay.textContent = `${firstNumbers} ${operator} ${secondNumbers}`;
         console.log('This is second',secondNumbers);
       }
-      else if(secondNumbers !== ('' || '0')){
+      else {
         secondNumbers += e.target.textContent;
         firstDisplay.textContent = `${firstNumbers} ${operator} ${secondNumbers}`;
         console.log('This is second',secondNumbers);
       } 
     }
     else if(containEqual(firstDisplay.textContent) || firstDisplay.textContent === '0') {
+      secondNumbers = '';
       firstNumbers = e.target.textContent;
       firstDisplay.textContent = e.target.textContent;
       console.log('This is first',firstNumbers);
     }
     else if(firstDisplay.textContent !== '0') {
+      secondNumbers = '';
       firstNumbers += e.target.textContent;
       firstDisplay.textContent += e.target.textContent;
       console.log('This is first',firstNumbers);
     }
-    //console.log('This is first',firstNumbers);
-    //console.log('This is second',secondNumbers);
   });
 });
 
@@ -91,7 +85,6 @@ operatorButtons.forEach((button) => {
     if(firstDisplay.textContent === firstNumbers) {
       operator = e.target.textContent;
       firstDisplay.textContent = `${firstNumbers} ${operator}`;
-      console.log("It's Works");
       console.log("This the operator:",operator)
     }
     else if(containOperator(firstDisplay.textContent)) {
