@@ -88,9 +88,6 @@ operatorButtons.forEach((button) => {  // There is still a problem
       firstDisplay.textContent = `${firstNumbers} ${operator}`;
       console.log("This the operator:",operator)
     }
-    else if(containOperator(firstDisplay.textContent)) {
-    
-    }
   })
 });
 
