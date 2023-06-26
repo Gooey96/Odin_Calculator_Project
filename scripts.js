@@ -25,13 +25,14 @@ function operate(a, operation, b) {
       results = add(a, b);
       break;
     case '-':
-      results = subtract(a, b);        // This function probably need to refractor
-      break;                           // Maybe not 
-    case 'x':                          // Time will tell
+      results = subtract(a, b);        
+      break;                           
+    case 'x':                          
       results = multiply(a, b);
       break;
     case '/':
-      results = divide(a, b);
+      if(b === 0) return 'Kabooom'
+      else results = divide(a, b);
   }
   return results;
 };
