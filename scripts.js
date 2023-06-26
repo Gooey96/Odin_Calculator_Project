@@ -72,9 +72,9 @@ numberButtons.forEach((button) => {    // This function is finally finished woho
 
 operatorButtons.forEach((button) => {
   button.addEventListener('click', function(e) {
-    operator = e.target.textContent;
     let results = '';
     if(firstDisplay.textContent === firstNumbers) {
+      operator = e.target.textContent;
       firstDisplay.textContent = `${firstNumbers} ${operator}`;
       console.log("It's Works"); // This might be wrong 
     }
