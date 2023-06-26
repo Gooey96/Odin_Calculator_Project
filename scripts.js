@@ -43,7 +43,11 @@ const operatorButtons = document.querySelectorAll('.operator');
 const equalButton = document.querySelector('.equal');
 
 function containOperator(opr) {
-  return /\D/.test(opr)
+  return /\D/.test(opr);
+};
+
+function containEqual(eql) {
+  return /=/.test(eql);
 };
 
 numberButtons.forEach((button) => {    
