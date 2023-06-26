@@ -43,7 +43,7 @@ const operatorButtons = document.querySelectorAll('.operator');
 
 numberButtons.forEach((button) => {
   button.addEventListener('click', function(e) {
-    if(secondDisplay.textContent !== '') {
+    if(firstDisplay.textContent === `${firstNumbers} ${operator}`) {
       if(e.target.textContent === '0') {
         secondNumbers = e.target.textContent;
         firstDisplay.textContent = e.target.textContent;
