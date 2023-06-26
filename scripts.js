@@ -44,7 +44,7 @@ const operatorButtons = document.querySelectorAll('.operator');
 numberButtons.forEach((button) => {
   button.addEventListener('click', function(e) {
     if(firstDisplay.textContent === `${firstNumbers} ${operator}`) {
-      if(e.target.textContent === '0') {
+      if(e.target.textContent === '0') {        // This is wrong
         secondNumbers = e.target.textContent;
         firstDisplay.textContent = e.target.textContent;
       }
@@ -71,7 +71,8 @@ operatorButtons.forEach((button) => {
     operator = e.target.textContent;
     let results = '';
     if(firstDisplay.textContent === firstNumbers) {
-      firstDisplay.textContent = `${firstNumbers} ${operator}`
+      firstDisplay.textContent = `${firstNumbers} ${operator}`;
+      console.log("It's Works"); // This might be wrong 
     }
   })
 })
