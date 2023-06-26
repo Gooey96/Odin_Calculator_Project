@@ -41,10 +41,14 @@ const secondDisplay = document.querySelector('.second_display');
 const numberButtons = document.querySelectorAll('.numbers');
 const operatorButtons = document.querySelectorAll('.operator');
 
+function containOperator(opr) {
+  return /\D/.test(opr)
+}
+
 numberButtons.forEach((button) => {
   button.addEventListener('click', function(e) {
-    if(firstDisplay.textContent === `${firstNumbers} ${operator}`) {
-      if(e.target.textContent === '0') {        // This is wrong
+    if(containOperator(firstDisplay.textContent)) {
+      if(e.target.textContent === '0') {
         secondNumbers = e.target.textContent;
         firstDisplay.textContent = e.target.textContent;
       }
