@@ -80,7 +80,7 @@ numberButtons.forEach((button) => {
   });
 });
 
-operatorButtons.forEach((button) => {
+operatorButtons.forEach((button) => {  // There is still a problem
   button.addEventListener('click', function(e) {
     let results = '';
     if(containOperator(firstDisplay.textContent) || firstDisplay.textContent === firstNumbers) {
