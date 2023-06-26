@@ -83,6 +83,12 @@ numberButtons.forEach((button) => {    // Probably ok now i don't know
 operatorButtons.forEach((button) => {  // There is still a problem
   button.addEventListener('click', function(e) {
     let results = '';
+    if(secondDisplay.textContent !== '') {
+      firstNumbers = secondDisplay.textContent;
+      secondNumbers = '';  // Probably not right but close
+      secondDisplay.textContent = '';
+      firstDisplay.textContent = `${firstNumbers} ${e.target.textContent}`;
+    }
     if(containOperator(firstDisplay.textContent) || firstDisplay.textContent === firstNumbers) {
       operator = e.target.textContent;
       firstDisplay.textContent = `${firstNumbers} ${operator}`;
