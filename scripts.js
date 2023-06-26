@@ -50,11 +50,11 @@ numberButtons.forEach((button) => {
     if(containOperator(firstDisplay.textContent)) {
       if(e.target.textContent === '0') {
         secondNumbers = e.target.textContent;
-        firstDisplay.textContent = e.target.textContent;
+        firstDisplay.textContent = `${firstNumbers} ${operator} ${secondNumbers}`;
       }
       else {
         secondNumbers += e.target.textContent;
-        firstDisplay.textContent += e.target.textContent;
+        firstDisplay.textContent = `${firstNumbers} ${operator} ${secondNumbers}`;
       }
     }
     else if(firstDisplay.textContent === '0') {
