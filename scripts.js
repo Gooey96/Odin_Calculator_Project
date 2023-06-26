@@ -82,7 +82,7 @@ numberButtons.forEach((button) => {
 operatorButtons.forEach((button) => {
   button.addEventListener('click', function(e) {
     let results = '';
-    if(firstDisplay.textContent === firstNumbers) {
+    if(containOperator(firstDisplay.textContent) || firstDisplay.textContent === firstNumbers) {
       operator = e.target.textContent;
       firstDisplay.textContent = `${firstNumbers} ${operator}`;
       console.log("This the operator:",operator)
