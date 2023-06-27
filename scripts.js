@@ -80,14 +80,22 @@ numberButtons.forEach((button) => {    // Probably ok now i don't know
   });
 });
 
-operatorButtons.forEach((button) => {  // There is still a problem
+operatorButtons.forEach((button) => {  // Finally finished :D
   button.addEventListener('click', function(e) {
     let results = '';
     if(secondDisplay.textContent !== '') {
       firstNumbers = secondDisplay.textContent;
-      secondNumbers = '';  // Probably not right but close
+      secondNumbers = '';
       secondDisplay.textContent = '';
       firstDisplay.textContent = `${firstNumbers} ${e.target.textContent}`;
+    }
+    else if(secondDisplay.textContent === '' && secondNumbers !== '') {
+      let first = +firstNumbers;
+      let second = +secondNumbers;
+      results = operate(first, operator, second);
+      firstDisplay.textContent = `${results} ${e.target.textContent}`;
+      firstNumbers = results;
+      secondNumbers = '';
     }
     if(containOperator(firstDisplay.textContent) || firstDisplay.textContent === firstNumbers) {
       operator = e.target.textContent;
@@ -97,7 +105,7 @@ operatorButtons.forEach((button) => {  // There is still a problem
   })
 });
 
-equalButton.addEventListener('click', function(e) { // Not finish yet
+equalButton.addEventListener('click', function(e) { // I think this is finished maybe.
   if(containOperator(firstDisplay.textContent) && secondNumbers) {
     let first = +firstNumbers;
     let second = +secondNumbers;
@@ -108,6 +116,6 @@ equalButton.addEventListener('click', function(e) { // Not finish yet
     console.log(typeof(second));
   }
   else if(firstDisplay.textContent === firstNumbers) {
-    secondDisplay.textContent = `${firstNumbers}`;  // This is also not finish yet
+    secondDisplay.textContent = `${firstNumbers}`;
   }
 });
