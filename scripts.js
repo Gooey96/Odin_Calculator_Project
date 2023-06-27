@@ -51,15 +51,16 @@ function containEqual(eql) {
   return /=/.test(eql);
 };
 
-numberButtons.forEach((button) => {    // Probably ok now i don't know
-  button.addEventListener('click', function(e) {
+numberButtons.forEach((button) => {    // Probably ok now i don't know (old comment)
+  button.addEventListener('click', function(e) {  // It's still not ok (new comment)
     if(containOperator(firstDisplay.textContent) && !containEqual(firstDisplay.textContent)) {
        if(secondNumbers === ('' || '0')) {
         secondNumbers = e.target.textContent;
         firstDisplay.textContent = `${firstNumbers} ${operator} ${secondNumbers}`;
         console.log('This is second',secondNumbers);
-      }
-      else {
+      }          // Reminder that when zero is one the secondDisplay after pressing equal
+      else {     // if you insert a different number and press one of the operator button
+                 // then it gonna take the secondDisplay (0) as the firstNumber.
         secondNumbers += e.target.textContent;
         firstDisplay.textContent = `${firstNumbers} ${operator} ${secondNumbers}`;
         console.log('This is second',secondNumbers);
