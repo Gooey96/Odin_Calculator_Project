@@ -58,9 +58,9 @@ numberButtons.forEach((button) => {    // Probably ok now i don't know (old comm
         secondNumbers = e.target.textContent;
         firstDisplay.textContent = `${firstNumbers} ${operator} ${secondNumbers}`;
         console.log('This is second',secondNumbers);
-      }          // Reminder that when zero is one the secondDisplay after pressing equal
-      else {     // if you insert a different number and press one of the operator button
-                 // then it gonna take the secondDisplay (0) as the firstNumber.
+      }       // Reminder that when zero is one the secondDisplay after pressing equal
+      else {  // if you insert a different number and press one of the operator buttons
+              // then it gonna take the secondDisplay (0) as the firstNumber.
         secondNumbers += e.target.textContent;
         firstDisplay.textContent = `${firstNumbers} ${operator} ${secondNumbers}`;
         console.log('This is second',secondNumbers);
