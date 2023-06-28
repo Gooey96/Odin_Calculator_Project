@@ -42,6 +42,7 @@ const secondDisplay = document.querySelector('.second_display');
 const numberButtons = document.querySelectorAll('.numbers');
 const operatorButtons = document.querySelectorAll('.operator');
 const equalButton = document.querySelector('.equal');
+const deleteButton = document.querySelector('.delete_btn');
 
 function containOperator(opr) {
   return /\D/.test(opr);
@@ -103,7 +104,7 @@ operatorButtons.forEach((button) => {  // Finally finished :D
       secondDisplay.textContent = '';
       console.log("This the operator:",operator)
     }
-  })
+  });
 });
 
 equalButton.addEventListener('click', function(e) { // This is finished :D
