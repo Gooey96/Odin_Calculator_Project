@@ -44,6 +44,7 @@ const operatorButtons = document.querySelectorAll('.operator');
 const equalButton = document.querySelector('.equal');
 const deleteButton = document.querySelector('.delete_btn'); // Still not finished yet
 const clearButton = document.querySelector('.clear_btn');
+const pointerButton = document.querySelector('.pointer');
 
 function containOperator(opr) {
   return /\D/.test(opr);
