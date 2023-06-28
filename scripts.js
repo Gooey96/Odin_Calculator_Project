@@ -118,6 +118,7 @@ equalButton.addEventListener('click', function(e) { // I think this is finished 
     console.log(typeof(second));
   }
   else if(firstDisplay.textContent === firstNumbers) {
+    firstDisplay.textContent = `${firstNumbers} ${'='}`
     secondDisplay.textContent = `${firstNumbers}`;
   }
 });
