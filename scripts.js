@@ -52,6 +52,16 @@ function containEqual(eql) {
   return /=/.test(eql);
 };
 
+/*deleteButton.addEventListener('click', function() {
+  if(firstDisplay.textContent === '0') {
+    firstDisplay.textContent = '0'             After pressing delete 
+  }                                            the operator buttons doesn't work
+  else if(firstDisplay.textContent !== '0') {
+    firstDisplay.textContent = firstDisplay.textContent.toString().slice(0, -1);
+    return;
+  }
+});*/
+
 numberButtons.forEach((button) => { // This is also finished :D
   button.addEventListener('click', function(e) {
     if(containOperator(firstDisplay.textContent) && !containEqual(firstDisplay.textContent)) {
