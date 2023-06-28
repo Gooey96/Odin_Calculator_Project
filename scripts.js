@@ -43,6 +43,7 @@ const numberButtons = document.querySelectorAll('.numbers');
 const operatorButtons = document.querySelectorAll('.operator');
 const equalButton = document.querySelector('.equal');
 const deleteButton = document.querySelector('.delete_btn');
+const clearButton = document.querySelector('.clear_btn');
 
 function containOperator(opr) {
   return /\D/.test(opr);
