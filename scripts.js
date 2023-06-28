@@ -53,6 +53,14 @@ function containEqual(eql) {
   return /=/.test(eql);
 };
 
+clearButton.addEventListener('click', function() {
+  firstDisplay.textContent = '0';
+  secondDisplay.textContent = '';
+  firstNumbers = '0';
+  secondNumbers = '';
+  operator = '';
+});
+
 /*deleteButton.addEventListener('click', function() {
   if(firstDisplay.textContent === '0') {
     firstDisplay.textContent = '0'             After pressing delete 
