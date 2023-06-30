@@ -58,8 +58,9 @@ function containPointer(point) {
   return /./.test(point);
 }
 
-pointerButton.addEventListener('click', function() {
-  if(firstDisplay.textContent) {}
+pointerButton.addEventListener('click', function(e) {
+  if(firstNumbers.includes('.') && firstDisplay.textContent.includes('.')) return
+  firstDisplay.textContent += '.';  // Not finished 
 });
 
 clearButton.addEventListener('click', function() {
