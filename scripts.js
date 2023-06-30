@@ -54,6 +54,10 @@ function containEqual(eql) {
   return /=/.test(eql);
 };
 
+function containPointer(point) {
+  return /./.test(point);
+}
+
 pointerButton.addEventListener('click', function() {
   if(firstDisplay.textContent) {}
 });
