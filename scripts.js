@@ -54,6 +54,10 @@ function containEqual(eql) {
   return /=/.test(eql);
 };
 
+pointerButton.addEventListener('click', function() {
+  if(firstDisplay.textContent) {}
+});
+
 clearButton.addEventListener('click', function() {
   firstDisplay.textContent = '0';
   secondDisplay.textContent = '';
