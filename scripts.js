@@ -59,7 +59,21 @@ function containPointer(point) {
 }
 
 pointerButton.addEventListener('click', function(e) {
-  
+  if(!containPointer(secondNumbers)) {
+    secondNumbers += e.target.textContent;
+  }
+  else if(!containPointer(firstNumbers)) {
+    firstNumbers += e.target.textContent;
+  }
+  else if(containPointer(secondNumbers) || secondNumbers === '') {
+    return;
+  }             // Still not finished 
+  else if(containPointer(firstNumbers)) {
+    return;
+  }             // I don't know what wrong with this function
+  else {
+    console.log('Not happening');
+  }
 });
 
 clearButton.addEventListener('click', function() {
