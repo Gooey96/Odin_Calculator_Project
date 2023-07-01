@@ -60,7 +60,7 @@ function containPointer(point) {
 
 pointerButton.addEventListener('click', function(e) {
   if(firstNumbers.includes('.') && firstDisplay.textContent.includes('.')) return
-  firstDisplay.textContent += '.';  // Not finished 
+  firstDisplay.textContent += '.';
 });
 
 clearButton.addEventListener('click', function() {
