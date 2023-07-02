@@ -47,7 +47,7 @@ const clearButton = document.querySelector('.clear_btn');
 const pointerButton = document.querySelector('.pointer');
 
 function containOperator(opr) {
-  return /\D/.test(opr);
+  return /[x/+-]/.test(opr);
 };
 
 function containEqual(eql) {
