@@ -58,7 +58,7 @@ function containPointer(point) {
   return /./.test(point);
 }
 
-pointerButton.addEventListener('click', function(e) {
+/*pointerButton.addEventListener('click', function(e) {
   if(!containPointer(secondNumbers)) {
     secondNumbers += e.target.textContent;
   }
@@ -74,7 +74,7 @@ pointerButton.addEventListener('click', function(e) {
   else {
     console.log('Not happening');
   }
-});
+});*/
 
 clearButton.addEventListener('click', function() {
   firstDisplay.textContent = '0';
