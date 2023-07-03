@@ -1,3 +1,7 @@
+// There is still some bugs left that need to fix
+// but i think it good enough as is and will come
+// back and fix it later if i remember that is 
+
 let firstNumbers = '0';
 let secondNumbers = '';
 let operator = '';
@@ -66,9 +70,9 @@ clearButton.addEventListener('click', function() {
 });
 
 deleteButton.addEventListener('click', function() {
-  if(firstDisplay.textContent === '0') {
+  if(firstDisplay.textContent === '0') { // Bug: need to press twice for space
     firstDisplay.textContent = '0'             
-  }                                            
+  }     // The delete button need to press twice when there is a space  
   else if(firstDisplay.textContent !== '0') {
     firstDisplay.textContent = firstDisplay.textContent.toString().slice(0, -1);
     firstNumbers = firstNumbers.toString().slice(0, -1);
@@ -83,13 +87,13 @@ numberButtons.forEach((button) => { // This is also finished :D
         secondNumbers = e.target.textContent;
         firstDisplay.textContent = `${firstNumbers} ${operator} ${secondNumbers}`;
         console.log('This is second',secondNumbers);
-      }
-      else {
+      }          // Bug: number can have more than one pointer 
+      else {     // Reminder that the pointer can have more than one
         secondNumbers += e.target.textContent;
         firstDisplay.textContent = `${firstNumbers} ${operator} ${secondNumbers}`;
         console.log('This is second',secondNumbers);
       }
-    }
+    }           // So i need to fix it before since it is a bug
     else if(containEqual(firstDisplay.textContent) || firstDisplay.textContent === '0') {
       secondNumbers = '';
       firstNumbers = e.target.textContent;
