@@ -44,7 +44,6 @@ const operatorButtons = document.querySelectorAll('.operator');
 const equalButton = document.querySelector('.equal');
 const deleteButton = document.querySelector('.delete_btn'); // Still not finished yet
 const clearButton = document.querySelector('.clear_btn');
-const pointerButton = document.querySelector('.pointer');
 
 function containOperator(opr) {
   return /[x/+-]/.test(opr);
@@ -57,24 +56,6 @@ function containEqual(eql) {
 function containPointer(point) {
   return /./.test(point);
 }
-
-/*pointerButton.addEventListener('click', function(e) {
-  if(!containPointer(secondNumbers)) {
-    secondNumbers += e.target.textContent;
-  }
-  else if(!containPointer(firstNumbers)) {
-    firstNumbers += e.target.textContent;
-  }
-  else if(containPointer(secondNumbers) || secondNumbers === '') {
-    return;
-  }             // Still not finished 
-  else if(containPointer(firstNumbers)) {
-    return;
-  }             // I don't know what wrong with this function
-  else {
-    console.log('Not happening');
-  }
-});*/
 
 clearButton.addEventListener('click', function() {
   firstDisplay.textContent = '0';
