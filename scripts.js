@@ -65,15 +65,16 @@ clearButton.addEventListener('click', function() {
   operator = '';
 });
 
-/*deleteButton.addEventListener('click', function() {
+deleteButton.addEventListener('click', function() {
   if(firstDisplay.textContent === '0') {
-    firstDisplay.textContent = '0'             After pressing delete 
-  }                                            the operator buttons doesn't work
+    firstDisplay.textContent = '0'             
+  }                                            
   else if(firstDisplay.textContent !== '0') {
     firstDisplay.textContent = firstDisplay.textContent.toString().slice(0, -1);
+    firstNumbers = firstNumbers.toString().slice(0, -1);
     return;
   }
-});*/
+});
 
 numberButtons.forEach((button) => { // This is also finished :D
   button.addEventListener('click', function(e) {
