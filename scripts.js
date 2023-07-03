@@ -97,7 +97,7 @@ clearButton.addEventListener('click', function() {
 numberButtons.forEach((button) => { // This is also finished :D
   button.addEventListener('click', function(e) {
     if(containOperator(firstDisplay.textContent) && !containEqual(firstDisplay.textContent)) {
-       if(secondNumbers === ('' || '0')) {
+      if(secondNumbers === ('' || '0')) {
         secondNumbers = e.target.textContent;
         firstDisplay.textContent = `${firstNumbers} ${operator} ${secondNumbers}`;
         console.log('This is second',secondNumbers);
