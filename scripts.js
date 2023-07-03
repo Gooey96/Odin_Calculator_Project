@@ -117,7 +117,7 @@ operatorButtons.forEach((button) => {  // Finally finished :D
     else if(secondDisplay.textContent === '' && secondNumbers !== '') {
       let first = +firstNumbers;  // This statement become true when secondDisplay is 
       let second = +secondNumbers;// empty and secondNumbers is empty
-      results = operate(first, operator, second);
+      results = Math.round(operate(first, operator, second) * 10) / 10;
       firstDisplay.textContent = `${results} ${e.target.textContent}`;
       firstNumbers = results;
       secondNumbers = '';
@@ -135,7 +135,7 @@ equalButton.addEventListener('click', function(e) { // This is finished :D
   if(containOperator(firstDisplay.textContent) && secondNumbers) {
     let first = +firstNumbers;
     let second = +secondNumbers;
-    let results = operate(first, operator, second);
+    let results = Math.round(operate(first, operator, second) * 10) / 10;
     firstDisplay.textContent = `${firstNumbers} ${operator} ${secondNumbers} ${'='}`
     secondDisplay.textContent = results;
     console.log(typeof(first));
